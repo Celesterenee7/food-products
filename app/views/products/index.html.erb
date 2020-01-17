@@ -10,4 +10,15 @@
 <p>There are no products yet.</p>
 <% end %>
 
+<h1>Products With Most Reviews</h1>
+<% if @products.any? %>
+<ul>
+  <% @products.top_rated.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no products yet.</p>
+<% end %>
+
 <h4 class="butt"><%= link_to 'New product', new_product_path %></h4>

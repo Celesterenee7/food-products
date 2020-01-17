@@ -9,10 +9,11 @@
 <h3>Rating: <%= @product.rating %></h3>
 <h4>Here are the reviews for this product:</h4>
 <% if @product.reviews.any? %>
-<% @product.reviews.sort_name.each do |review| %>
+
+<% @product.reviews.each do |review| %>
 <ul>
   <li>
-    <%= link_to review.name, product_review_path(@product, review) %>
+    <%= link_to review.author, product_review_path(@product, review) %>
   </li>
 </ul>
 <% end %>
