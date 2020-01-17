@@ -1,4 +1,4 @@
-
+<h1>Welcome to Marios Specialty Products</h1>
 <h1>All Products</h1>
 <% if @products.any? %>
 <ul>
@@ -10,15 +10,29 @@
 <p>There are no products yet.</p>
 <% end %>
 
-<h1>Products With Most Reviews</h1>
+<h1>Most Reviewed Products</h1>
 <% if @products.any? %>
 <ul>
-  <% @products.top_rated.each do |product| %>
+  <% @products.top_reviews.each do |product| %>
   <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
 <% else %>
-<p>There are no products yet.</p>
+<p>There are no recipes yet.</p>
 <% end %>
 
-<h4 class="butt"><%= link_to 'New product', new_product_path %></h4>
+<h1>Most Recently Added Products</h1>
+<% if @products.any? %>
+<ul>
+  <% @products.three_recent.each do |product| %>
+  <li><%= link_to product.name, product_path(product) %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are no recipes yet.</p>
+<% end %>
+
+
+
+
+<h4 class="butt"><%= link_to 'Add New Product', new_product_path %></h4>

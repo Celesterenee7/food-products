@@ -1,6 +1,5 @@
 class Product < ApplicationRecord
-  scope :top_rated, -> { where("rating > ?", 6) }
-  scope :most_reviews, -> { where("reviews > ?", 10) }
+  scope :top_reviews, -> { where("rating > ?", 6) }
   scope :three_recent, -> { order(created_at: :desc).limit(3)}
   has_many :reviews, dependent: :destroy
   
