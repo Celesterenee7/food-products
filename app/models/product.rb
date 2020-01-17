@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   scope :most_reviews, -> { where("reviews > ?", 10) }
   scope :three_recent, -> { order(created_at: :desc).limit(3)}
   has_many :reviews, dependent: :destroy
+  
   validates :name, presence: true
   validates :cost, presence: true
   validates :country_of_origin, presence: true
