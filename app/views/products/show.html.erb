@@ -1,34 +1,30 @@
 <div class="row col-md-12 top">
-<h1><%= @product.name %></h1>
+<h1 class="title"><%= @product.name %></h1>
 </div>
 <div class="row">
-
-
 <div class="col-md-6">
-
-<h3>Rating: <%= @product.rating %></h3>
-<h4>Here are the reviews for this product:</h4>
+<h4 class="second-title">Reviews for this product:</h4>
 <% if @product.reviews.any? %>
 
 <% @product.reviews.each do |review| %>
-<ul>
-  <li>
+
+  <p>
     <%= link_to review.author, product_review_path(@product, review) %>
-  </li>
-</ul>
+  </p>
+
 <% end %>
+
 <% else %>
 <p>No reviews are listed for this product.</p>
 <% end %>
-
-
+<br>
 <p class="btn btn-info"><%= link_to "Add a review", new_product_review_path(@product) %></p>
-
 </div>
-<div class="col-md-6 right">
+
+<div class="col-md-6">
 
 <% if @product.cost != nil %>
-<h3><%= @product.name %> Costs:</h3>
+<h3 class="second-title"><%= @product.name %> Costs:</h3>
 
 <p>$<%= @product.cost %></p>
 
@@ -38,12 +34,12 @@
 <% end %>
 </div>
 
-<div class="col-md-6 right">
+<div class="col-md-6">
 
 <% if @product.country_of_origin != nil %>
-<h3>This product comes from:</h3>
+<h3 class="second-title">This product comes from:</h3>
 
-<p><%= @product.country_of_origin %></p>
+<p><em><%= @product.country_of_origin %></em></p>
 
 <% else %>
 <h4>There are no origins listed for this product yet!</h4>
@@ -51,7 +47,7 @@
 <% end %>
 </div>
 </div>
-<hr>
+<br>
 <p><%= link_to "Edit", edit_product_path(@product) %> |
   <%= link_to "Delete product", product_path(@product),
   :data => {:confirm => "Are you sure?",

@@ -1,16 +1,17 @@
 * {}
 
 a {
-    font-size: 18px;
-    color: #2D4D02;
+    font-size: 23px;
+    color: #9B0909;
     text-decoration: none !important;
     font-style: italic;
     font-weight: 500;
 }
 
 a:hover {
-    color: #69AC0A !important;
+    color: #F9A113 !important;
 }
+
 
 ul {
     list-style: none;
@@ -24,7 +25,7 @@ label {
 .basic-text {
     font-size: 18px;
     font-weight: 600;
-    color: #2D4D02;
+    color: #9B0909;
 }
 
 .container {
@@ -43,7 +44,7 @@ label {
 
 .main-button {
     padding: 12px 45px !important;
-    background-color: #69AC0A;
+    background-color: #F9A113;
     text-decoration: none !important;
     color: white !important;
     letter-spacing: 0.1em;
@@ -52,9 +53,13 @@ label {
 
 .main-button:hover {
     color: white !important;
-    background-color: #2D4D02 !important;
+    background-color: #9B0909 !important;
 }
 
 .title {
-    font-size: 35px;
+    font-size: 40px;
+}
+
+.second-title {
+    font-size: 26px;
 }
