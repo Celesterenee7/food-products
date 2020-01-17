@@ -28,9 +28,9 @@
 <div class="col-md-6 right">
 
 <% if @product.cost != nil %>
-<h3>costs:</h3>
+<h3><%= @product.name %> Costs:</h3>
 
-<p><%= @product.cost %></p>
+<p>$<%= @product.cost %></p>
 
 <% else %>
 <h4>There are no costs listed for this product yet!</h4>
@@ -41,7 +41,7 @@
 <div class="col-md-6 right">
 
 <% if @product.country_of_origin != nil %>
-<h3>costs:</h3>
+<h3>This product comes from:</h3>
 
 <p><%= @product.country_of_origin %></p>
 
