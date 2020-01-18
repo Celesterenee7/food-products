@@ -29,36 +29,15 @@ label {
 }
 
 .container {
-    padding-top: 100px;
+    padding-top: 80px;
     padding-left: 300px !important;
-}
-
-.delete-button {
-    padding: 12px 45px !important;
-    background-color: #DB050E;
-    text-decoration: none !important;
-    color: white !important;
-    letter-spacing: 0.1em;
-    font-size: 17px;
-}
-
-.main-button {
-    padding: 12px 45px !important;
-    background-color: #F9A113;
-    text-decoration: none !important;
-    color: white !important;
-    letter-spacing: 0.1em;
-    font-size: 17px;
-}
-
-.main-button:hover {
-    color: white !important;
-    background-color: #9B0909 !important;
+    padding-bottom: 80px;
 }
 
 .title {
     font-size: 40px;
 }
+
 
 .second-title {
     font-size: 26px;

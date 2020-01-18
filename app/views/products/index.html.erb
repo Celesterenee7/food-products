@@ -17,7 +17,7 @@
 <h2 class="second-title">Most Reviewed Products</h2>
 <% if @products.any? %>
 <ul>
-  <% @products.top_reviews.each do |product| %>
+  <% @products.most_reviews.each do |product| %>
   <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
